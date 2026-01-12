@@ -1,0 +1,884 @@
+:root {
+    --bg-color: #000;
+    --text-color: #fff;
+    --primary-yellow: #eafe00;
+    --text-light-grey:#9e9490;
+    /* Used for lines and icons/text in active state */
+    --box-border-color: #333;
+    /* Darker border for the other boxes */
+    --padding-base: 20px;
+}
+
+ 
+
+::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: #000000;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #eafe00;	
+}
+
+/* Basic Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* Use a font similar to the image, or replace with a custom font */
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    line-height: 1.6 !important;
+    overflow-x: hidden;
+}
+
+.navbar .nav-link {
+    color: #7c7360;
+}
+
+.navbar .nav-link:hover {
+    color: #eafe00;
+}
+
+.nav-link.active {
+    color: #eafe00 !important;
+}
+
+.logo-div {
+    width: 200px;
+    height: 80px;
+}
+
+.logo-div img {
+    width: 80%;
+    object-fit: cover;
+}
+
+.services-header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main-sector,
+.other-sectors {
+    flex: 1;
+}
+
+.sector-title {
+    font-size: 1.2rem;
+    font-weight: normal;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    margin-left: 15px;
+    color: #9e9490;
+}
+
+.service-box {
+    padding: 30px;
+    margin-bottom: 20px;
+    border: 1px solid var(--box-border-color);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0));
+    /* Slight dark gradient for depth */
+    border-radius: 25px;
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 15px rgba(255, 196, 0, 0.3);
+}
+
+
+
+.service-header {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--primary-yellow);
+    margin-right: 15px;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.main-film-box .icon {
+    color: var(--primary-yellow);
+    /* Ensures main box header text is yellow */
+}
+
+.service-box p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-list li {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+/* Other Sectors Grid Layout (4 Boxes) */
+.sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns for desktop */
+    gap: 30px;
+}
+
+/* --- Clients Section (Footer) --- */
+.clients-section {
+    background-color: #282828;
+    /* Darker background strip */
+    border-top: 1px solid var(--box-border-color);
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    /* Reset full width for the footer strip */
+    position: absolute;
+    /* To make it span the entire width of the viewport */
+    left: 0;
+    right: 0;
+    bottom: 3%;
+    width: 100%;
+}
+
+.client-logo img {
+    max-height: 30px;
+    /* Adjust based on image size */
+    width: auto;
+    filter: invert(100%);
+    /* Invert placeholder images to white/light color */
+    opacity: 0.8;
+}
+
+/* --- Responsiveness (Media Queries) --- */
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+
+
+    .main-sector,
+    .other-sectors {
+        flex: none;
+        /* No longer taking up equal space */
+        width: 100%;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+
+
+    .sectors-grid {
+        grid-template-columns: 1fr;
+        /* Single column for all other services */
+    }
+
+    .clients-section {
+        flex-wrap: wrap;
+        /* Logos wrap on smaller screens */
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .client-logo {
+        margin: 10px;
+    }
+}
+
+.portfolio,
+.Team,
+.service {
+    /* max-width: 1400px; */
+    margin: 0 auto;
+    padding: 2% 5%;
+}
+
+/* --- Main Service Tabs --- */
+.main-tabs {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    /* Allow tabs to wrap on mobile */
+}
+
+.main-tabs .tab {
+    text-decoration: none;
+    color: var(--tab-inactive-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    transition: color 0.3s;
+    white-space: nowrap;
+    /* Prevent tabs from breaking their names */
+}
+
+.main-tabs .tab:hover,
+.main-tabs .tab.active {
+    color: var(--text-color);
+    /* Only FILMS is active and has the yellow line in the image,
+       but usually, the active tab would have a visual indicator. */
+}
+
+.main-tabs .tab.active {
+    color: var(--primary-yellow);
+}
+
+/* --- Sub-Category Tabs/Filters --- */
+.sub-tabs {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    /* Align the arrow to the bottom of the first tab */
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.sub-tab {
+    color: var(--text-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    font-weight: 500;
+    padding-bottom: 5px;
+    /* To align with the arrow container */
+    white-space: nowrap;
+}
+
+.sub-tab:hover,
+.sub-tab.active {
+    opacity: 1;
+}
+
+/* Container for the arrow and its corresponding tab */
+.sub-tab-arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding-right: 20px;
+    /* Space to the right of the arrow */
+}
+
+.sub-tab-arrow-container .sub-tab {
+    opacity: 1;
+    /* Make the active sub-tab fully visible */
+}
+
+/* Stylings for the little yellow arrow SVG */
+.arrow-indicator {
+    width: 20px;
+    /* Width of the arrow */
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    /* Position it above the tab text */
+    left: -10px;
+    transform: rotate(180deg);
+    /* Flip it to point down/left */
+}
+
+/* --- Project Cards Layout (CSS Grid) --- */
+.projects-grid {
+    display: grid;
+    /* 3 columns for desktop, with a slight gap */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 80px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 6px 15px rgb(74 63 63 / 71%);
+}
+
+.project-image {
+    width: 100%;
+    /* Set an aspect ratio for the image container */
+    padding-bottom: 66.66%;
+    /* 3:2 aspect ratio (e.g., for a 900x600 image) */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.project-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the area without distortion */
+}
+
+.project-title {
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.project-year {
+    font-size: 0.9rem;
+    color: var(--primary-yellow);
+    /* Yellow year */
+    margin-bottom: 15px;
+}
+
+.project-description {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    opacity: 0.8;
+    color: #9e9490;
+}
+
+/* --- Responsiveness (Media Queries) --- */
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+    .portfolio-container {
+        padding: var(--padding-base) 20px;
+    }
+
+    .projects-grid {
+        /* Switch to 2 columns for tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main-tabs {
+        gap: 25px;
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .projects-grid {
+        /* Single column for phones */
+        grid-template-columns: 1fr;
+    }
+
+    .main-tabs {
+        gap: 15px;
+        font-size: 1rem;
+    }
+
+    .sub-tabs {
+        flex-direction: column;
+        /* Stack sub-tabs vertically */
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .sub-tab-arrow-container {
+        /* Adjust positioning for vertical layout */
+        padding-right: 0;
+    }
+
+    .arrow-indicator {
+        left: -20px;
+        /* Move arrow slightly more to the left */
+    }
+}
+
+
+
+/* --- Main Section Layout (CSS Grid) --- */
+.about-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    /* Left content takes more space than right */
+    gap: 100px;
+    /* Space between the two main columns */
+    align-items: start;
+    /* Align content to the top of its grid cell */
+    position: relative;
+    /* To position content above the glow */
+    z-index: 1;
+}
+
+/* Left Content Column */
+.left-content {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    /* Space between "Faces Behind" and "The Vision" */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+       font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    text-align: end;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: var(--text-light-grey);
+    line-height: 1.8;
+}
+
+/* Right Content Column (Team Grid) */
+.right-content {
+    padding-top: 100px;
+    /* Push the team grid down to align with 'The Vision' */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Two columns of team members */
+    gap: 40px;
+    /* Space between team members */
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the name below the photo */
+    text-align: center;
+}
+
+.member-photo-frame {
+    width: 180px;
+    /* Size of the yellow square frame */
+    height: 180px;
+    background-color: var(--primary-yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensure photo stays within the frame */
+    margin-bottom: 15px;
+    border-radius: 5px;
+    /* Slight roundness if desired, or keep sharp */
+    box-shadow: 0 0 20px rgba(255, 196, 0, 0.4);
+    /* Glow effect for the frame */
+}
+
+.member-photo {
+    width: 90%;
+    /* Make photo slightly smaller than the frame */
+    height: 90%;
+    object-fit: cover;
+    border-radius: 5px;
+    /* Match frame radius if applicable */
+    filter: grayscale(100%) brightness(0.7);
+    /* Make it black and white, slightly darker */
+}
+
+.member-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.box-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.box-left .description {
+    text-align: left;
+    width: 50%;
+    font-size: 20px;
+}
+
+.box-right {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: baseline;
+}
+
+.box-right .description {
+    text-align: right;
+    width: 68%;
+    font-size: 20px;
+}
+
+/* --- Responsiveness (Media Queries) --- */
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        /* Stack columns vertically */
+        gap: 60px;
+    }
+
+    .left-content {
+        gap: 60px;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .right-content {
+        padding-top: 0;
+        /* Remove top padding when stacked */
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* Keep all 4 members in one row if space allows */
+        gap: 30px;
+    }
+
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+
+
+    .about-section {
+        gap: 40px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 0.85rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns for mobile */
+        gap: 20px;
+    }
+
+    .member-photo-frame {
+        width: 140px;
+        height: 140px;
+    }
+
+    .member-name {
+        font-size: 0.8rem;
+    }
+}
+
+.Team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+}
+
+.team .imgbox {
+    position: relative;
+    background-color: #eafe00;
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    /* margin: 25px; */
+}
+
+.team img {
+    position: absolute;
+    width: 105%;
+    object-fit: cover;
+    right: -3%;
+    bottom: 0;
+}
+
+
+.portfolio .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #eafe00 !important;
+    background-color: transparent !important;
+    font-size: 25px !important;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-right: 50px;
+    padding: 0 !important;
+}
+
+.portfolio .nav-link {
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff !important;
+    text-decoration: none;
+    background: 0 0;
+    letter-spacing: 6px;
+    padding: 0 !important;
+    margin-right: 50px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 5));
+    }
+}
+
+.px-10 {
+    padding: 0 100px;
+}
+
+.slider {
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+}
+
+.slider .slide-track {
+    animation: scroll 20s linear infinite;
+    /* replaced $animationSpeed with 40s */
+    display: flex;
+    width: calc(250px * 5);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+
+.baner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row-1-col-1 {
+    width: 100%;
+    height: 200px;
+}
+
+.row-1-col-2 {
+    width: 100%;
+    height: 200px;
+}
+
+.row-1-col-3 {
+    width: 100%;
+    height: 400px;
+}
+
+.row-1-col-4 {
+    width: 100%;
+    height: 400px;
+}
+
+.row-2-col-1 {
+    width: 100%;
+    height: 400px;
+}
+
+.row-2-col-2 {
+    width: 100%;
+    height: 400px;
+}
+
+.row-2-col-3 {
+    width: 100%;
+    height: 200px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0%;
+}
+
+.end-text {
+    text-align: end;
+    width: 75%;
+    float: right;
+}
+
+
+
+.team-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.spray-wrap {
+    position: relative;
+}
+
+
+.spray-core {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at 50% 40%,
+            rgba(255, 215, 0, 0.95) 0%,
+            rgba(255, 215, 0, 0.55) 10%,
+            rgba(255, 215, 0, 0.20) 25%,
+            rgba(255, 215, 0, 0.08) 45%,
+            transparent 70%);
+    filter: blur(6px);
+    transform: scale(1);
+    animation: corePulse 3.8s ease-in-out infinite alternate;
+    mix-blend-mode: screen;
+
+    /* width: min(60vmin, 700px); */
+    /* height: min(60vmin, 700px); */
+    border-radius: 50%;
+}
+
+.spray-halo {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(255, 215, 0, 0.12) 0%,
+            rgba(255, 215, 0, 0.06) 30%,
+            rgba(255, 215, 0, 0.02) 55%,
+            transparent 75%);
+    transform: scale(3);
+    animation: haloFloat 6s ease-in-out infinite alternate;
+    filter: blur(16px);
+    mix-blend-mode: screen;
+}
+
+
+@media (max-width:420px) {
+    .spray-wrap {
+        width: 80vmin;
+        height: 80vmin;
+    }
+}
+
+.icon-before::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(/src/assets/icon/icon-pen.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.2);
+    transform: rotate(310deg);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* Align all text under the heading, not under the icon */
+.service-box1 p,
+.service-box1 .service-list {
+    margin-left: 50px;
+    /* SAME or slightly more than icon width */
+}
+
+.service-box p,
+.service-box1 p {
+    margin-bottom: 10px;
+    color: #9e9490;
+}
+
+.service-list {
+    margin-top: 0px;
+    font-weight: 750;
+}
+
+.services-title {
+    font-weight: 750;
+    margin-bottom: 0;
+}
+
+/* ************************************** */
+ .yellow-spray {
+  --size: 150px;
+  --top: auto;
+  --left: auto;
+  --right: auto;
+  --bottom: auto;
+  --bg:auto;
+
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  top: var(--top);
+  left: var(--left);
+  right: var(--right);
+  bottom: var(--bottom);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0; /* Behind text but inside container */
+  /* background: radial-gradient(circle, rgba(255, 217, 0, 0.514) 0%, rgba(255, 217, 0, 0.1) 70%, transparent 100%); */
+  background: var(--bg);
+  filter: blur(20px);
+  opacity: 1;
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(5); }
+  25% { transform: scale(8.5); }
+  50% { transform: scale(10); }
+  75% { transform: scale(8.5); }
+  100% { transform: scale(5); }
+}
+
+ 

@@ -1,0 +1,496 @@
+<!-- function Portfolio() {
+  return (
+    <section className="portfolio">
+      <ul className="nav nav-pills mb-3 main-tab" id="pills-tab" role="tablist">
+        <li className="nav-item" role="presentation">
+          <button
+            className="nav-link active"
+            id="pills-films-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-films"
+            type="button"
+            role="tab"
+            aria-controls="pills-films"
+            aria-selected="true"
+          >
+            FILMS
+          </button>
+        </li>
+        <li className="nav-item" role="presentation">
+          <button
+            className="nav-link"
+            id="pills-socialmedia-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-socialmedia"
+            type="button"
+            role="tab"
+            aria-controls="pills-socialmedia"
+            aria-selected="false"
+          >
+            SOCIALMEDIA
+          </button>
+        </li>
+        <li className="nav-item" role="presentation">
+          <button
+            className="nav-link"
+            id="pills-photography-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-photography"
+            type="button"
+            role="tab"
+            aria-controls="pills-photography"
+            aria-selected="false"
+          >
+            PHOTOGRAPHY
+          </button>
+        </li>
+        <li className="nav-item" role="presentation">
+          <button
+            className="nav-link"
+            id="pills-design-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-design"
+            type="button"
+            role="tab"
+            aria-controls="pills-design"
+            aria-selected="false"
+          >
+            DESIGN & BRANDING
+          </button>
+        </li>
+        <li className="nav-item" role="presentation">
+          <button
+            className="nav-link"
+            id="pills-website-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#pills-website"
+            type="button"
+            role="tab"
+            aria-controls="pills-website"
+            aria-selected="false"
+          >
+            WEBSITE DEVELOPMENT
+          </button>
+        </li>
+      </ul>
+
+      <div className="tab-content" id="pills-tabContent">
+        {/* FILMS TAB */}
+        <div
+          className="tab-pane fade show active"
+          id="pills-films"
+          role="tabpanel"
+          aria-labelledby="pills-films-tab"
+          tabIndex="0"
+        >
+          <ul
+            className="nav nav-pills mb-3 main-tab border-bottom"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link active"
+                id="pills-short_films-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-short_films"
+                type="button"
+                role="tab"
+                aria-controls="pills-short_films"
+                aria-selected="true"
+              >
+                SHORT FILMS
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="pills-commercial_ads-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-commercial_ads"
+                type="button"
+                role="tab"
+                aria-controls="pills-commercial_ads"
+                aria-selected="false"
+              >
+                COMMERCIAL ADS
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="pills-corporate_videos-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-corporate_videos"
+                type="button"
+                role="tab"
+                aria-controls="pills-corporate_videos"
+                aria-selected="false"
+              >
+                CORPORATE VIDEOS
+              </button>
+            </li>
+            <li className="nav-item" role="presentation">
+              <button
+                className="nav-link"
+                id="pills-documentaries-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-documentaries"
+                type="button"
+                role="tab"
+                aria-controls="pills-documentaries"
+                aria-selected="false"
+              >
+                DOCUMENTARIES
+              </button>
+            </li>
+          </ul>
+
+          <div className="tab-content" id="pills-tabContent">
+            {/* SHORT FILMS */}
+            <div
+              className="tab-pane fade show active"
+              id="pills-short_films"
+              role="tabpanel"
+              aria-labelledby="pills-short_films-tab"
+              tabIndex="0"
+            >
+              <div className="d-flex justify-content-between">
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="PAGES OF DECEPTION image"
+                    />
+                  </div>
+                  <h3 className="project-title">PAGES OF DECEPTION</h3>
+                  <p className="project-year">(2024-25)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="CHAPPAL image"
+                    />
+                  </div>
+                  <h3 className="project-title">CHAPPAL</h3>
+                  <p className="project-year">(2025-26)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="RAJWANSH image"
+                    />
+                  </div>
+                  <h3 className="project-title">RAJWANSH</h3>
+                  <p className="project-year">(2026)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="RAJWANSH image"
+                    />
+                  </div>
+                  <h3 className="project-title">RAJWANSH</h3>
+                  <p className="project-year">(2026)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="tab-pane fade"
+              id="pills-commercial_ads"
+              role="tabpanel"
+              aria-labelledby="pills-commercial_ads-tab"
+              tabIndex="0"
+            >
+              <div className="d-flex justify-content-between">
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="PAGES OF DECEPTION image"
+                    />
+                  </div>
+                  <h3 className="project-title">Commercial ADS card 1</h3>
+                  <p className="project-year">(2024-25)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="CHAPPAL image"
+                    />
+                  </div>
+                  <h3 className="project-title">Commercial ADS card 2</h3>
+                  <p className="project-year">(2025-26)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="RAJWANSH image"
+                    />
+                  </div>
+                  <h3 className="project-title">Commercial ADS card 3</h3>
+                  <p className="project-year">(2026)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="RAJWANSH image"
+                    />
+                  </div>
+                  <h3 className="project-title">Commercial ADS card 4</h3>
+                  <p className="project-year">(2026)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="tab-pane fade"
+              id="pills-corporate_videos"
+              role="tabpanel"
+              aria-labelledby="pills-corporate_videos-tab"
+              tabIndex="0"
+            >
+              <div className="d-flex justify-content-between">
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="PAGES OF DECEPTION image"
+                    />
+                  </div>
+                  <h3 className="project-title">Corporrate vdo card 1</h3>
+                  <p className="project-year">(2024-25)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="CHAPPAL image"
+                    />
+                  </div>
+                  <h3 className="project-title">Corporrate vdo card 2</h3>
+                  <p className="project-year">(2025-26)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="RAJWANSH image"
+                    />
+                  </div>
+                  <h3 className="project-title">Corporrate vdo card 3</h3>
+                  <p className="project-year">(2026)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="RAJWANSH image"
+                    />
+                  </div>
+                  <h3 className="project-title">Corporrate vdo card 4</h3>
+                  <p className="project-year">(2026)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className="tab-pane fade"
+              id="pills-documentaries"
+              role="tabpanel"
+              aria-labelledby="pills-documentaries-tab"
+              tabIndex="0"
+            >
+              <div className="d-flex justify-content-between">
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="PAGES OF DECEPTION image"
+                    />
+                  </div>
+                  <h3 className="project-title">Documentaries card 1</h3>
+                  <p className="project-year">(2024-25)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="CHAPPAL image"
+                    />
+                  </div>
+                  <h3 className="project-title">Documentaries card 2</h3>
+                  <p className="project-year">(2025-26)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="RAJWANSH image"
+                    />
+                  </div>
+                  <h3 className="project-title">Documentaries card 3</h3>
+                  <p className="project-year">(2026)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+                <div className="project-card" style={{ width: "25rem" }}>
+                  <div className="project-image">
+                    <img
+                      src="https://picsum.photos/200"
+                      alt="RAJWANSH image"
+                    />
+                  </div>
+                  <h3 className="project-title">Documentaries card 4</h3>
+                  <p className="project-year">(2026)</p>
+                  <p className="project-description">
+                    A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL
+                    AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR
+                    WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* OTHER MAIN TABS */}
+        <div
+          className="tab-pane fade"
+          id="pills-socialmedia"
+          role="tabpanel"
+          aria-labelledby="pills-socialmedia-tab"
+          tabIndex="0"
+        >
+          SOCIAL MEDIA
+        </div>
+
+        <div
+          className="tab-pane fade"
+          id="pills-photography"
+          role="tabpanel"
+          aria-labelledby="pills-photography-tab"
+          tabIndex="0"
+        >
+          DESIGN & BRANDING
+        </div>
+
+        <div
+          className="tab-pane fade"
+          id="pills-design"
+          role="tabpanel"
+          aria-labelledby="pills-design-tab"
+          tabIndex="0"
+        >
+          design DEVELOPMENT
+        </div>
+
+        <div
+          className="tab-pane fade"
+          id="pills-website"
+          role="tabpanel"
+          aria-labelledby="pills-website-tab"
+          tabIndex="0"
+        >
+          WEBSITE DEVELOPMENT
+        </div>
+      </div>
+        <div className="yellow-spray" style={{
+          "--size": "400px",
+          "--bottom": "2%",
+          "--right": "40%",
+          "--bg": "radial-gradient(circle, rgba(255, 217, 0, 0.52) 0%, rgba(255, 217, 0, 0.1) 50%, transparent 100%)"
+        }}></div>
+    </section>
+  );
+}
+
+export default Portfolio; -->
