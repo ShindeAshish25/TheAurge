@@ -1,3 +1,11 @@
+import ashish1 from "../assets/Potfolio/Branding/Ashish 1.jpg"
+import ashish2 from "../assets/Potfolio/Branding/Ashish 2.jpg"
+import ashish3 from "../assets/Potfolio/Branding/Ashish 3.jpg"
+import ashish4 from "../assets/Potfolio/Branding/Ashish 4.jpg"
+
+
+
+
 function Portfolio() {
 
   const PORTFOLIO_DATA = {
@@ -32,69 +40,61 @@ function Portfolio() {
       },
     ],
 
-    SOCIALMEDIA: [
+    Branding: [
       {
-        img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
+        img: ashish1,
+        title: "PAGES OF DECEPTION",
         year: "(2024-25)",
         // description:
-          // "Sample description for social media project.",
+          // "A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.",
+      },
+      {
+        img: ashish2,
+        title: "CHAPPAL",
+        year: "(2025-26)",
+        // description:
+          // "A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.",
+      },
+      {
+        img: ashish3,
+        title: "RAJWANSH",
+        year: "(2026)",
+        // description:
+          // "A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.",
+      },
+      {
+        img: ashish4,
+        title: "RAJWANSH",
+        year: "(2026)",
+        // description:
+          // "A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.",
+      },
+    ],
+
+     Documentries: [
+      {
+        img: "https://picsum.photos/200",
+        title: "WEB PROJECT",
+        year: "(2024-25)",
+        // description: "Website development project description.",
       },
       {
         img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
+        title: "WEB PROJECT",
         year: "(2024-25)",
-        // description:
-          // "Sample description for social media project.",
+        // description: "Website development project description.",
       },
       {
         img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
+        title: "WEB PROJECT",
         year: "(2024-25)",
-        // description:
-          // "Sample description for social media project.",
+        // description: "Website development project description.",
       },
       {
         img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
+        title: "WEB PROJECT",
         year: "(2024-25)",
-        // description:
-          // "Sample description for social media project.",
-      },
-      {
-        img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
-        year: "(2024-25)",
-        // description:
-          // "Sample description for social media project.",
-      },
-      {
-        img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
-        year: "(2024-25)",
-        // description:
-          // "Sample description for social media project.",
-      },
-      {
-        img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
-        year: "(2024-25)",
-        // description:
-          // "Sample description for social media project.",
-      },
-      {
-        img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
-        year: "(2024-25)",
-        // description:
-          // "Sample description for social media project.",
-      },
-      {
-        img: "https://picsum.photos/200",
-        title: "SOCIAL PROJECT 1",
-        year: "(2024-25)",
-        // description:
-          // "Sample description for social media project.",
+        // description: "Website development project description.",
       },
     ],
 
@@ -129,6 +129,72 @@ function Portfolio() {
       },
     ],
 
+    Social_Media: [
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+      {
+        img: "https://picsum.photos/200",
+        title: "SOCIAL PROJECT 1",
+        year: "(2024-25)",
+        // description:
+          // "Sample description for social media project.",
+      },
+    ],
+
     DESIGN_BRANDING: [
       {
         img: "https://picsum.photos/200",
@@ -156,44 +222,51 @@ function Portfolio() {
       },
     ],
 
-    WEBSITE_DEVELOPMENT: [
+    TV_Commercials: [
       {
         img: "https://picsum.photos/200",
-        title: "WEB PROJECT",
+        title: "PAGES OF DECEPTION",
         year: "(2024-25)",
-        // description: "Website development project description.",
+        // description:
+          // "A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.",
       },
       {
         img: "https://picsum.photos/200",
-        title: "WEB PROJECT",
-        year: "(2024-25)",
-        // description: "Website development project description.",
+        title: "CHAPPAL",
+        year: "(2025-26)",
+        // description:
+          // "A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.",
       },
       {
         img: "https://picsum.photos/200",
-        title: "WEB PROJECT",
-        year: "(2024-25)",
-        // description: "Website development project description.",
+        title: "RAJWANSH",
+        year: "(2026)",
+        // description:
+          // "A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.",
       },
       {
         img: "https://picsum.photos/200",
-        title: "WEB PROJECT",
-        year: "(2024-25)",
-        // description: "Website development project description.",
+        title: "RAJWANSH",
+        year: "(2026)",
+        // description:
+          // "A STRUGGLING WRITER MURDERS HIS SUCCESSFUL FRIEND TO STEAL AN UNFINISHED MANUSCRIPT, ONLY TO SPIRAL INTO A CHILLING BLUR WHERE FICTION AND REALITY DANGEROUSLY COLLIDE.",
       },
     ],
+
+ 
   };
 
    const tabs = [
-    { id: "FILMS", label: "FILMS" },
-    { id: "SOCIALMEDIA", label: "SOCIAL MEDIA" },
-    { id: "PHOTOGRAPHY", label: "PHOTOGRAPHY" },
-    { id: "DESIGN_BRANDING", label: "DESIGN & BRANDING" },
-    { id: "WEBSITE_DEVELOPMENT", label: "WEBSITE DEVELOPMENT" },
+    { id: "FILMS", label: "Films" },
+    { id: "Documentries", label: "Documentries" },
+    { id: "TV_Commercials", label: "TV Commercials" },
+    { id: "Social_Media", label: "Social Media" },
+    { id: "Branding", label: "Branding" },
+    { id: "PHOTOGRAPHY", label: "Photography" },
   ];
 
   return (
-     <section className="portfolio">
+     <section className="portfolio"> 
       <ul className="nav nav-pills mb-3 main-tab border-bottom" id="pills-tab" role="tablist">
         {tabs.map((tab, index) => (
           <li className="nav-item" role="presentation" key={tab.id}>
