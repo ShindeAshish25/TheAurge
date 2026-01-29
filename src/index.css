@@ -881,4 +881,73 @@ footer {
   100% { transform: scale(5); }
 }
 
+.project-card {
+  width: 250px;
+  cursor: pointer;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  margin: 20px;
+}
+
+/* A4 SIZE */
+.a4-container {
+  width: 800px;
+  height: 1131px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.a4-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  font-size: 60px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-btn.left {
+  left: 40px;
+}
+
+.nav-btn.right {
+  right: 40px;
+}
+
  
